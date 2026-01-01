@@ -8,16 +8,15 @@
       gtag('js', new Date());
       gtag('config', 'G-MW00H63T89');
     </script>
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse for Rent in Gulbarga | Bhoodevi Warehouse</title>
     
-    <title>Warehouse for Rent in Gulbarga | 21,000 Sq Ft Godown | Bhoodevi Warehouse</title>
-    <meta name="description" content="21,000 sq ft industrial warehouse for rent in Nandur Kesaratagi, Gulbarga (Kalaburagi). High ceiling, wide shutters, ideal for cement, agriculture & logistics. Contact +91 63625 19546.">
-    <meta name="keywords" content="Warehouse in Gulbarga, Godown for rent Kalaburagi, Industrial Shed Gulbarga, Storage Space Shahabad Road, Bhoodevi Warehouse">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* CORE VARIABLES */
         :root {
             --primary: #1a5276;
             --secondary: #e67e22;
@@ -26,683 +25,191 @@
             --gray: #7f8c8d;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { line-height: 1.6; color: var(--dark); background-color: #f5f5f5; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         
-        body {
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #f5f5f5;
-        }
+        /* HEADER */
+        header { background-color: var(--primary); color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
         
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo-img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            background: white; /* Added white background for visibility */
-            border-radius: 5px;
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-img { 
+            height: 60px; 
+            width: auto; 
+            background: white; /* White bg ensures logo is visible */
             padding: 2px;
-            margin-right: 10px;
+            border-radius: 4px;
         }
+        .logo h1 { font-size: 22px; font-weight: 600; }
         
-        .logo h1 {
-            font-size: 22px;
-            font-weight: 600;
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 25px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--secondary);
-        }
-        
-        .mobile-menu {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+        .mobile-menu { display: none; font-size: 24px; cursor: pointer; }
+
+        /* HERO SECTION - FIXED IMAGE PATH */
         .hero {
-            /* CORRECTED IMAGE PATH */
-            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('hero.jpg');
+            /* Using ./hero.jpg to ensure it looks in the current folder */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('./hero.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 140px 0;
-            text-align: center;
-       }
-        
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
-            transition: background-color 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .cta-button:hover {
-            background-color: #d35400;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 80px 0;
-        }
-        
-        section:nth-child(even) {
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 3px;
-            background-color: var(--secondary);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Property Details */
-        .property-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .detail-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        
-        .detail-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .card-header {
-            background-color: var(--primary);
-            color: white;
-            padding: 15px 20px;
-        }
-        
-        .card-header h3 {
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .card-body {
-            padding: 20px;
-        }
-        
-        .card-body ul {
-            list-style: none;
-        }
-        
-        .card-body ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .card-body ul li:last-child {
-            border-bottom: none;
-        }
-        
-        .feature-label {
-            font-weight: 500;
-        }
-        
-        /* Image Gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            background: #f0f0f0;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.03);
-        }
-        
-        .gallery-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 10px;
+            padding: 160px 0;
             text-align: center;
         }
         
-        .image-placeholder {
-            text-align: center;
-            padding: 20px;
-            color: var(--gray);
+        .hero h2 { font-size: 42px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+        .cta-button { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; }
+        
+        /* SECTIONS */
+        section { padding: 80px 0; }
+        section:nth-child(even) { background-color: white; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 32px; color: var(--primary); margin-bottom: 10px; }
+        
+        /* GRIDS & CARDS */
+        .property-details, .image-gallery, .feature-list, .compliance-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
         }
         
-        .image-placeholder i {
-            font-size: 48px;
-            margin-bottom: 15px;
-            display: block;
-            color: var(--primary);
-        }
+        .detail-card, .compliance-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         
-        /* List Styles */
-        .feature-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+        /* GALLERY IMAGES */
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
         
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
+        /* CONTACT */
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-info { background: var(--primary); color: white; padding: 40px; border-radius: 8px; }
+        .contact-form { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
         
-        .feature-icon {
-            background-color: var(--primary);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
+        /* FOOTER */
+        footer { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
         
-        .feature-content h4 {
-            margin-bottom: 5px;
-            color: var(--primary);
-        }
-        
-        /* Compliance Grid */
-        .compliance-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .compliance-item {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        
-        .compliance-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .compliance-item i {
-            font-size: 36px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        /* Location Section */
-        .location-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .map-placeholder {
-            background-color: #e0e0e0;
-            height: 400px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            font-size: 18px;
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+            nav ul { display: none; } /* Simplified mobile menu for stability */
+            .mobile-menu { display: block; }
         }
 
-        .map-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+        /* --- CHATBOT & WHATSAPP STYLES --- */
         
-        .location-info h3 {
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .location-info ul {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .location-info ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .location-info ul li:last-child {
-            border-bottom: none;
-        }
-        
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        .contact-info {
-            background-color: var(--primary);
+        /* WhatsApp: GREEN, Above Chatbot */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #25d366;
             color: white;
-            padding: 40px;
-            border-radius: 8px;
-        }
-        
-        .contact-info h3 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        
-        .contact-details {
-            margin-bottom: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        
-        .contact-item i {
-            font-size: 20px;
-            color: var(--secondary);
-        }
-        
-        .contact-form {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-col h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-        
-        .footer-col ul {
-            list-style: none;
-        }
-        
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-col ul li a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-col ul li a:hover {
-            color: var(--secondary);
-        }
-        
-        .copyright {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #aaa;
-            font-size: 14px;
+            font-size: 30px;
+            line-height: 60px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            z-index: 10001;
+            text-decoration: none;
         }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .location-container,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h2 {
-                font-size: 36px;
-            }
+
+        /* Chatbot Button: BLUE, Bottom Right */
+        #chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2b6cb0;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 10001;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            display: flex; /* Ensures icon is centered */
+            align-items: center;
+            justify-content: center;
         }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: var(--primary);
-                flex-direction: column;
-                padding: 20px;
-                text-align: center;
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 10px 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .hero {
-                padding: 80px 0;
-            }
-            
-            .hero h2 {
-                font-size: 32px;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
+
+        /* Chatbox Window */
+        #chatbot-box {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 320px;
+            height: 400px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            z-index: 10002; /* Sits on top of everything */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
-        
-        @media (max-width: 576px) {
-            .hero h2 {
-                font-size: 28px;
-            }
-            
-            .section-title h2 {
-                font-size: 28px;
-            }
-            
-            .property-details {
-                grid-template-columns: 1fr;
-            }
-           }
-       </style>
-     </head>
-     <body>
+
+        #chatbot-header { background: #2b6cb0; color: white; padding: 10px; border-radius: 10px 10px 0 0; font-weight: bold; display: flex; justify-content: space-between; }
+        #chatbot-messages { flex: 1; padding: 10px; overflow-y: auto; background: #f9f9f9; }
+        .bot-msg { background: #e1effe; padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; display: inline-block; }
+        .user-msg { background: #d1fae5; padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; text-align: right; display: block; margin-left: auto; }
+        #chatbot-input { display: flex; border-top: 1px solid #eee; }
+        #chatbot-input input { flex: 1; padding: 10px; border: none; outline: none; }
+        #chatbot-input button { padding: 10px 20px; background: #2b6cb0; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
     <header>
         <div class="container header-container">
-      <div class="logo">
-    <img src="logo.jpg.jpg" alt="Bhoodevi Warehouse Logo" class="logo-img">
-    <h1>Bhoodevi <span>Warehouse</span></h1>
-      </div>
+            <div class="logo">
+                <img src="./logo.jpg" alt="Logo" class="logo-img">
+                <h1>Bhoodevi Warehouse</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#compliance">Compliance</a></li>
-                    <li><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
     <section class="hero" id="home">
         <div class="container">
             <h2>Industrial Grade Storage Facility</h2>
-            <p>Ready-to-move Grade-B industrial storage with excellent road connectivity in Kalaburagi's key industrial belt</p>
+            <p>Ready-to-move Grade-B industrial storage with excellent road connectivity in Kalaburagi.</p>
             <a href="#contact" class="cta-button">Contact Us Today</a>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>Property Details</h2>
-                <p>Discover our state-of-the-art warehouse facility designed for optimal industrial operations</p>
-            </div>
-            
+            <div class="section-title"><h2>Property Details</h2></div>
             <div class="property-details">
                 <div class="detail-card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-ruler-combined"></i> Area Specifications</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <span class="feature-label">Total Plot Area</span>
-                                <span>44,000 sq ft</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Built-Up Area</span>
-                                <span>21,000 sq ft</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Structure Type</span>
-                                <span>Stress-less curved roofing</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Floor Type</span>
-                                <span>Heavy-duty RCC</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Plinth Height</span>
-                                <span>5 ft</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3><i class="fas fa-ruler-combined"></i> Specs</h3>
+                    <p><strong>Plot Area:</strong> 44,000 sq ft</p>
+                    <p><strong>Built-Up:</strong> 21,000 sq ft</p>
+                    <p><strong>Flooring:</strong> Heavy-duty RCC</p>
                 </div>
-                
                 <div class="detail-card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-truck-loading"></i> Loading & Storage</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <span class="feature-label">Loading Shutters</span>
-                                <span>7 (10x11 ft each)</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Driveway Access</span>
-                                <span>Container & truck friendly</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Docking</span>
-                                <span>All at plinth level</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3><i class="fas fa-truck-loading"></i> Logistics</h3>
+                    <p><strong>Shutters:</strong> 7 (10x11 ft)</p>
+                    <p><strong>Access:</strong> Container Friendly</p>
+                    <p><strong>Docking:</strong> Plinth Level</p>
                 </div>
-                
                 <div class="detail-card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-tools"></i> Utilities</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                <span class="feature-label">Power Supply</span>
-                                <span>10 HP | 3-Phase</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Water Supply</span>
-                                <span>Dedicated borewell</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Fire Safety</span>
-                                <span>Hydrant system with NOC</span>
-                            </li>
-                            <li>
-                                <span class="feature-label">Ventilation</span>
-                                <span>Natural light & windows</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3><i class="fas fa-bolt"></i> Utilities</h3>
+                    <p><strong>Power:</strong> 10 HP (3-Phase)</p>
+                    <p><strong>Water:</strong> Dedicated Borewell</p>
+                    <p><strong>Safety:</strong> Fire Hydrant System</p>
                 </div>
             </div>
         </div>
@@ -710,168 +217,23 @@
 
     <section id="gallery">
         <div class="container">
-            <div class="section-title">
-                <h2>Facility Gallery</h2>
-                <p>Explore our industrial-grade warehouse through these images</p>
-            </div>
-            
+            <div class="section-title"><h2>Gallery</h2></div>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="imagesimg1.jpg.jpg" alt="Warehouse Exterior" class="gallery-img">
-                    <div class="gallery-caption">Warehouse Exterior</div>
+                    <img src="./imagesimg1.jpg" alt="Exterior">
+                    <div style="text-align:center; padding:5px;">Exterior</div>
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="imagesimg2.jpg.jpg" alt="Column-Free Interior" class="gallery-img">
-                    <div class="gallery-caption">Column-Free Interior</div>
+                    <img src="./imagesimg2.jpg" alt="Interior">
+                    <div style="text-align:center; padding:5px;">Interior</div>
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="imagesimg3.jpg.jpg" alt="Security Features - Gate" class="gallery-img">
-                    <div class="gallery-caption">Security Features - Main Gate</div>
+                    <img src="./imagesimg3.jpg" alt="Gate">
+                    <div style="text-align:center; padding:5px;">Main Gate</div>
                 </div>
-                
                 <div class="gallery-item">
-                    <img src="imagesimg4.jpg.jpg" alt="Loading Bays / Wash Area" class="gallery-img">
-                    <div class="gallery-caption">Loading Bays / Wash Area</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Infrastructure & Security</h2>
-                <p>Our facility is equipped with modern amenities for secure and efficient operations</p>
-            </div>
-            
-            <div class="feature-list">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h4>Security Systems</h4>
-                        <p>Boundary wall with main gate, security guard room at entrance, and controlled access</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-restroom"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h4>Support Facilities</h4>
-                        <p>2 toilets + 3 washrooms, dedicated handwash & sanitation area for workers</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h4>Water & Power</h4>
-                        <p>24×7 water availability from dedicated borewell, 10 HP 3-phase power connection</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-fire-extinguisher"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h4>Fire Safety</h4>
-                        <p>Installed fire hydrant system with Fire Department NOC for complete safety compliance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="compliance">
-        <div class="container">
-            <div class="section-title">
-                <h2>Compliance & Suitability</h2>
-                <p>Our warehouse is fully compliant for a wide range of industrial and commercial applications</p>
-            </div>
-            
-            <div class="compliance-grid">
-                <div class="compliance-item">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h4>FMCG & Consumer Goods</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-pills"></i>
-                    <h4>Pharma Distribution</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-snowflake"></i>
-                    <h4>Cold Chain Support</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-boxes"></i>
-                    <h4>E-Commerce Fulfilment</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-industry"></i>
-                    <h4>Industrial Materials</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-seedling"></i>
-                    <h4>Agri & Food Grains</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-cogs"></i>
-                    <h4>Automobile Parts</h4>
-                </div>
-                
-                <div class="compliance-item">
-                    <i class="fas fa-truck-moving"></i>
-                    <h4>3PL Services</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="location">
-        <div class="container">
-            <div class="section-title">
-                <h2>Location Advantages</h2>
-                <p>Strategically located in Kalaburagi's key industrial belt with excellent connectivity</p>
-            </div>
-            
-            <div class="location-container">
-                <div class="location-info">
-                    <h3>Prime Industrial Location</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Road No. 6, Near IOCL, Nandur Kesaratagi Industrial Area</li>
-                        <li><i class="fas fa-road"></i> Shahabad Road, Kalaburagi - 585105, Karnataka</li>
-                        <li><i class="fas fa-map-pin"></i> Coordinates: 17°16'21.1"N 76°52'10.0"E</li>
-                        <li><i class="fas fa-gas-pump"></i> Nearby fuel station (IOCL) for transport efficiency</li>
-                        <li><i class="fas fa-truck"></i> Direct access to Shahabad Road & nearby highways</li>
-                        <li><i class="fas fa-parking"></i> Smooth truck movement and ample parking space</li>
-                    </ul>
-                    
-                    <h3>Why Choose Bhoodevi Warehouse</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Clean, dry and secure space</li>
-                        <li><i class="fas fa-check-circle"></i> Strong infrastructure, zero leakage roofing</li>
-                        <li><i class="fas fa-check-circle"></i> Efficient loading operations with 7 shutters</li>
-                        <li><i class="fas fa-check-circle"></i> Water and power sorted from Day 1</li>
-                        <li><i class="fas fa-check-circle"></i> Transparent handling and professional maintenance</li>
-                    </ul>
-                </div>
-                
-                <div class="map-placeholder">
-                    <img src="imagesimg5.jpg.jpg" alt="Satellite view of the warehouse location" class="map-image">
+                    <img src="./imagesimg4.jpg" alt="Loading">
+                    <div style="text-align:center; padding:5px;">Loading Area</div>
                 </div>
             </div>
         </div>
@@ -879,281 +241,98 @@
 
     <section id="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch with us for more information or to schedule a site visit</p>
-            </div>
-            
+            <div class="section-title"><h2>Contact Us</h2></div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-user"></i>
-                            <div>
-                                <h4>Sanjay Kumar</h4>
-                                <p>proprietor</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <p>+91 63625 19546</p>
-                                <p>+91 98808 88056</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <p>Road No. 6, Near IOCL</p>
-                                <p>Nandur Kesaratagi Industrial Area</p>
-                                <p>Shahabad Road, Kalaburagi - 585105</p>
-                                <p>Karnataka, India</p>
-                            </div>
-                        </div>
+                    <h3>Sanjay Kumar</h3>
+                    <p>Proprietor</p>
+                    <br>
+                    <p><i class="fas fa-phone"></i> +91 63625 19546</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Road No. 6, Near IOCL, Nandur Kesaratagi, Kalaburagi</p>
+                    
+                    <div style="margin-top: 20px; text-align: center;">
+                        <img src="./contactimage.jpg" alt="Proprietor" style="width: 150px; border-radius: 8px; border: 2px solid white;">
                     </div>
-                    
-                    <h3>Business Hours</h3>
-                    <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                    <p>Sunday: Closed</p>
-                    
-         <div style="margin-top: 30px; text-align: center;">
-          <img src="contactimage.jpg.jpg" alt="Sanjay Kumar" style="max-width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-         </div> 
-
-             </div>      
-               <div class="contact-form">
-    <h3>Send Us a Message</h3>
-    <form id="inquiryForm" action="https://formspree.io/f/xanrjezn" method="POST">
-        <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="business">Business Type</label>
-            <select id="business" name="business">
-                <option value="">Select your business type</option>
-                <option value="fmcg">FMCG &amp; Consumer Goods</option>
-                <option value="pharma">Pharma Distribution</option>
-                <option value="ecommerce">E-Commerce Fulfilment</option>
-                <option value="industrial">Industrial Materials</option>
-                <option value="agri">Agri &amp; Food Grains</option>
-                <option value="automobile">Automobile Parts</option>
-                <option value="electronics">Electronics</option>
-                <option value="3pl">3PL Services</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your storage requirements..."></textarea>
-        </div>
-
-        <input type="hidden" name="_subject" value="New Bhoodevi Warehouse Inquiry">
-
-        <button type="submit" class="cta-button">Send Message</button>
-    </form>
-</div>
-        </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xanrjezn" method="POST">
+                        <div class="form-group"><label>Name</label><input type="text" name="name" required></div>
+                        <div class="form-group"><label>Phone</label><input type="tel" name="phone" required></div>
+                        <div class="form-group"><label>Message</label><textarea name="message"></textarea></div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>Bhoodevi Warehouse</h3>
-                    <p>Industrial Grade Storage Facility providing secure, efficient, and compliant warehousing solutions in Kalaburagi's key industrial belt.</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Property Details</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#features">Infrastructure</a></li>
-                        <li><a href="#compliance">Compliance</a></li>
-                        <li><a href="#location">Location</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Kalaburagi, Karnataka</li>
-                        <li><i class="fas fa-phone"></i> +91 63625 19546</li>
-                        <li><i class="fas fa-phone"></i> +91 98808 88056</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Business Hours</h3>
-                    <ul>
-                        <li>Monday - Saturday: 9:00 AM - 6:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Bhoodevi Warehouse. All Rights Reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2025 Bhoodevi Warehouse. All Rights Reserved.</p>
     </footer>
+
+    <a href="https://wa.me/916362519546?text=Hi,%20I%20am%20interested%20in%20Bhoodevi%20Warehouse." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button id="chatbot-button" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div id="chatbot-box" style="display: none;">
+        <div id="chatbot-header">
+            <span>Assistant</span>
+            <span style="cursor:pointer" onclick="toggleChat()">✖</span>
+        </div>
+        <div id="chatbot-messages">
+            <div class="bot-msg">Hello! Ask me about rent, area, or location.</div>
+        </div>
+        <div id="chatbot-input">
+            <input type="text" id="userInput" placeholder="Type here..." onkeypress="if(event.key==='Enter') sendMessage()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
     <script>
-    // Mobile menu toggle
-    document.querySelector('.mobile-menu').addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('show');
-    });
+        // FIXED: Simple inline toggle function
+        function toggleChat() {
+            var box = document.getElementById('chatbot-box');
+            if (box.style.display === 'none') {
+                box.style.display = 'flex';
+            } else {
+                box.style.display = 'none';
+            }
+        }
 
-    // Smooth scrolling for navigation links and hero button
-    document.querySelectorAll('nav a, .cta-button[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId && targetId.startsWith('#')) {
-                e.preventDefault();
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
+        async function sendMessage() {
+            var input = document.getElementById("userInput");
+            var message = input.value.trim();
+            if (!message) return;
+
+            var messages = document.getElementById("chatbot-messages");
+            
+            // Show user message
+            messages.innerHTML += '<div class="user-msg">' + message + '</div>';
+            input.value = "";
+            messages.scrollTop = messages.scrollHeight;
+
+            try {
+                // Connect to backend
+                var response = await fetch("https://bhoodevi-chatbot.onrender.com/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message: message })
                 });
+
+                var data = await response.json();
+                messages.innerHTML += '<div class="bot-msg">' + data.reply + '</div>';
+            } catch (error) {
+                messages.innerHTML += '<div class="bot-msg" style="color:red">Error connecting to server. Please call +91 63625 19546</div>';
             }
-        });
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                document.querySelector('nav ul').classList.remove('show');
-            }
-        });
-    });
-</script>
+            messages.scrollTop = messages.scrollHeight;
+        }
+    </script>
 
-<a href="https://wa.me/916362519546?text=Hi,%20I%20am%20interested%20in%20Bhoodevi%20Warehouse%20details." 
-   target="_blank" 
-   style="position: fixed; bottom: 90px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; font-size: 30px; line-height: 60px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none; transition: transform 0.3s;">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<style>
-  /* Chatbot button stays at the bottom (20px) */
-  #chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #2b6cb0;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 9999;
-  }
-
-  /* Chat window opens above the chatbot button */
-  #chatbot-box {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 320px;
-    max-height: 420px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-    z-index: 10000;
-  }
-
-  #chatbot-header {
-    background: #2b6cb0;
-    color: #fff;
-    padding: 10px;
-    font-weight: bold;
-    border-radius: 10px 10px 0 0;
-    /* ADDED: layout for title and close button */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #chatbot-messages {
-    padding: 10px;
-    overflow-y: auto;
-    flex: 1;
-    font-size: 14px;
-  }
-
-  .user {
-    text-align: right;
-    margin: 6px 0;
-    color: #000;
-  }
-
-  .bot {
-    text-align: left;
-    margin: 6px 0;
-    color: #2b6cb0;
-  }
-
-  #chatbot-input {
-    display: flex;
-    border-top: 1px solid #ccc;
-  }
-
-  #chatbot-input input {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    outline: none;
-  }
-
-  #chatbot-input button {
-    border: none;
-    padding: 10px;
-    background: #2b6cb0;
-    color: #fff;
-    cursor: pointer;
-  }
-</style>
-
-<button id="chatbot-button">💬</button>
-
-<div id="chatbot-box">
-  <div id="chatbot-header">
-      <span>Assistant</span>
-      <span id="close-chat" style="cursor: pointer; font-size: 20px;">&times;</span>
-  </div>
-  <div id="chatbot-messages"></div>
-  <div id="chatbot-input">
-    <input type="text" id="userInput" placeholder="Ask about warehouse services..." />
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
-
-<script>
-  const button = document.getElementById("chatbot-button");
-  const box = document.getElementById("chatbot-box");
-  const closeBtn = document.getElementById("close-chat"); // Select close button
-
-  // Open Chat
-  button.onclick = () => {
-    box.style.display =
+</body>
+</html>
