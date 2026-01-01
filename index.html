@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse for Rent in Gulbarga | Bhoodevi Warehouse</title>
     <meta name="description" content="21,000 sq ft industrial warehouse for rent in Nandur Kesaratagi, Gulbarga. Contact +91 63625 19546.">
+    <meta name="keywords" content="Warehouse in Gulbarga, Godown for rent Kalaburagi, Industrial Shed Gulbarga, Storage Space Shahabad Road, Bhoodevi Warehouse">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -43,16 +44,17 @@
             border-radius: 4px;
         }
         .logo h1 { font-size: 22px; font-weight: 600; }
+        .logo span { color: var(--secondary); }
         
         nav ul { display: flex; list-style: none; gap: 20px; }
         nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: var(--secondary); }
         .mobile-menu { display: none; font-size: 24px; cursor: pointer; }
 
-        /* --- HERO SECTION (Using .jpg.jpg) --- */
+        /* --- HERO SECTION --- */
         .hero {
-            /* Double extension used here as requested */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('hero.jpg.jpg');
+            /* Using .jpg.jpg */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('hero.jpg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -62,13 +64,16 @@
         }
         
         .hero h2 { font-size: 42px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+        .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 30px; }
         .cta-button { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
+        .cta-button:hover { background-color: #d35400; }
         
         /* --- SECTIONS --- */
         section { padding: 80px 0; }
         section:nth-child(even) { background-color: white; }
         .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 32px; color: var(--primary); margin-bottom: 10px; }
+        .section-title h2 { font-size: 32px; color: var(--primary); margin-bottom: 10px; position: relative; display: inline-block; }
+        .section-title h2:after { content: ''; position: absolute; width: 70px; height: 3px; background-color: var(--secondary); bottom: -10px; left: 50%; transform: translateX(-50%); }
         
         /* --- GRIDS & CARDS --- */
         .property-details, .image-gallery, .feature-list, .compliance-grid { 
@@ -77,31 +82,61 @@
             gap: 30px; 
         }
         
-        .detail-card, .compliance-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .card-header h3 { color: var(--primary); margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .detail-card, .compliance-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .detail-card:hover, .compliance-item:hover { transform: translateY(-5px); }
+        .card-header h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; font-size: 20px; }
         .card-body ul { list-style: none; }
-        .card-body li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+        .card-body li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .feature-label { font-weight: 600; color: var(--dark); }
         
-        /* --- GALLERY IMAGES (Using .jpg.jpg) --- */
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: transform 0.3s; }
-        .gallery-item:hover img { transform: scale(1.03); }
-        .gallery-caption { text-align: center; margin-top: 5px; font-weight: 500; color: var(--gray); }
+        /* --- GALLERY --- */
+        .gallery-item { position: relative; overflow: hidden; border-radius: 8px; background: #eee; }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-caption { position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.7); color: white; padding: 10px; text-align: center; }
+        
+        /* --- COMPLIANCE --- */
+        .compliance-item { text-align: center; }
+        .compliance-item i { font-size: 36px; color: var(--primary); margin-bottom: 15px; }
+        
+        /* --- FEATURES --- */
+        .feature-item { display: flex; gap: 15px; }
+        .feature-icon { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        
+        /* --- LOCATION --- */
+        .location-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .map-image { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; }
+        .location-info ul { list-style: none; }
+        .location-info li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; gap: 10px; align-items: center; }
         
         /* --- CONTACT --- */
         .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .contact-info { background: var(--primary); color: white; padding: 40px; border-radius: 8px; }
+        .contact-info h3 { margin-bottom: 20px; font-size: 24px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }
+        .contact-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start; }
+        .contact-item i { font-size: 20px; color: var(--secondary); margin-top: 5px; }
+        
         .contact-form { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 15px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; }
         
         /* --- FOOTER --- */
-        footer { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
+        footer { background: var(--dark); color: white; padding: 50px 0; }
+        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
+        .footer-col h3 { color: var(--secondary); margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col a { color: #ddd; text-decoration: none; }
+        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; color: #aaa; }
         
         /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .location-container, .contact-container { grid-template-columns: 1fr; }
+        }
         @media (max-width: 768px) {
-            .contact-container { grid-template-columns: 1fr; }
             nav ul { display: none; }
             .mobile-menu { display: block; }
+            .hero h2 { font-size: 32px; }
         }
 
         /* ================= BUTTON STYLES ================= */
@@ -198,8 +233,8 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="logo.jpg.jpg" alt="Logo" class="logo-img">
-                <h1>Bhoodevi Warehouse</h1>
+                <img src="logo.jpg.jpg" alt="Bhoodevi Warehouse Logo" class="logo-img">
+                <h1>Bhoodevi <span>Warehouse</span></h1>
             </div>
             <nav>
                 <ul>
@@ -207,6 +242,8 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                    <li><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -217,42 +254,57 @@
     <section class="hero" id="home">
         <div class="container">
             <h2>Industrial Grade Storage Facility</h2>
-            <p>Ready-to-move Grade-B industrial storage with excellent road connectivity.</p>
+            <p>Ready-to-move Grade-B industrial storage with excellent road connectivity in Kalaburagi's key industrial belt</p>
             <a href="#contact" class="cta-button">Contact Us Today</a>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <div class="section-title"><h2>Property Details</h2></div>
+            <div class="section-title">
+                <h2>Property Details</h2>
+                <p>Discover our state-of-the-art warehouse facility designed for optimal industrial operations</p>
+            </div>
+            
             <div class="property-details">
                 <div class="detail-card">
-                    <div class="card-header"><h3>Specs</h3></div>
+                    <div class="card-header">
+                        <h3><i class="fas fa-ruler-combined"></i> Area Specifications</h3>
+                    </div>
                     <div class="card-body">
                         <ul>
-                            <li><span>Plot Area</span> <span>44,000 sq ft</span></li>
-                            <li><span>Built-Up</span> <span>21,000 sq ft</span></li>
-                            <li><span>Floor</span> <span>Heavy-duty RCC</span></li>
+                            <li><span class="feature-label">Total Plot Area</span> <span>44,000 sq ft</span></li>
+                            <li><span class="feature-label">Built-Up Area</span> <span>21,000 sq ft</span></li>
+                            <li><span class="feature-label">Structure Type</span> <span>Stress-less curved roofing</span></li>
+                            <li><span class="feature-label">Floor Type</span> <span>Heavy-duty RCC</span></li>
+                            <li><span class="feature-label">Plinth Height</span> <span>5 ft</span></li>
                         </ul>
                     </div>
                 </div>
+                
                 <div class="detail-card">
-                    <div class="card-header"><h3>Logistics</h3></div>
+                    <div class="card-header">
+                        <h3><i class="fas fa-truck-loading"></i> Loading & Storage</h3>
+                    </div>
                     <div class="card-body">
                         <ul>
-                            <li><span>Shutters</span> <span>7 (10x11 ft)</span></li>
-                            <li><span>Access</span> <span>Container Friendly</span></li>
-                            <li><span>Docking</span> <span>Plinth Level</span></li>
+                            <li><span class="feature-label">Loading Shutters</span> <span>7 (10x11 ft each)</span></li>
+                            <li><span class="feature-label">Driveway Access</span> <span>Container & truck friendly</span></li>
+                            <li><span class="feature-label">Docking</span> <span>All at plinth level</span></li>
                         </ul>
                     </div>
                 </div>
+                
                 <div class="detail-card">
-                    <div class="card-header"><h3>Utilities</h3></div>
+                    <div class="card-header">
+                        <h3><i class="fas fa-tools"></i> Utilities</h3>
+                    </div>
                     <div class="card-body">
                         <ul>
-                            <li><span>Power</span> <span>10 HP (3-Phase)</span></li>
-                            <li><span>Water</span> <span>Borewell</span></li>
-                            <li><span>Safety</span> <span>Fire NOC</span></li>
+                            <li><span class="feature-label">Power Supply</span> <span>10 HP | 3-Phase</span></li>
+                            <li><span class="feature-label">Water Supply</span> <span>Dedicated borewell</span></li>
+                            <li><span class="feature-label">Fire Safety</span> <span>Hydrant system with NOC</span></li>
+                            <li><span class="feature-label">Ventilation</span> <span>Natural light & windows</span></li>
                         </ul>
                     </div>
                 </div>
@@ -262,38 +314,123 @@
 
     <section id="gallery">
         <div class="container">
-            <div class="section-title"><h2>Gallery</h2></div>
+            <div class="section-title">
+                <h2>Facility Gallery</h2>
+                <p>Explore our industrial-grade warehouse through these images</p>
+            </div>
+            
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="imagesimg1.jpg.jpg" alt="Exterior">
-                    <div class="gallery-caption">Exterior View</div>
+                    <img src="imagesimg1.jpg.jpg" alt="Warehouse Exterior">
+                    <div class="gallery-caption">Warehouse Exterior</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="imagesimg2.jpg.jpg" alt="Interior">
-                    <div class="gallery-caption">Column Free Interior</div>
+                    <img src="imagesimg2.jpg.jpg" alt="Column-Free Interior">
+                    <div class="gallery-caption">Column-Free Interior</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="imagesimg3.jpg.jpg" alt="Gate">
-                    <div class="gallery-caption">Main Gate</div>
+                    <img src="imagesimg3.jpg.jpg" alt="Security Features - Gate">
+                    <div class="gallery-caption">Security Features - Main Gate</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="imagesimg4.jpg.jpg" alt="Loading">
-                    <div class="gallery-caption">Loading Area</div>
+                    <img src="imagesimg4.jpg.jpg" alt="Loading Bays / Wash Area">
+                    <div class="gallery-caption">Loading Bays / Wash Area</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Infrastructure & Security</h2>
+                <p>Our facility is equipped with modern amenities for secure and efficient operations</p>
+            </div>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="feature-content">
+                        <h4>Security Systems</h4>
+                        <p>Boundary wall with main gate, security guard room at entrance, and controlled access</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-restroom"></i></div>
+                    <div class="feature-content">
+                        <h4>Support Facilities</h4>
+                        <p>2 toilets + 3 washrooms, dedicated handwash & sanitation area for workers</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-tint"></i></div>
+                    <div class="feature-content">
+                        <h4>Water & Power</h4>
+                        <p>24×7 water availability from dedicated borewell, 10 HP 3-phase power connection</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                    <div class="feature-content">
+                        <h4>Fire Safety</h4>
+                        <p>Installed fire hydrant system with Fire Department NOC for complete safety compliance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="compliance">
+        <div class="container">
+            <div class="section-title">
+                <h2>Compliance & Suitability</h2>
+                <p>Our warehouse is fully compliant for a wide range of industrial and commercial applications</p>
+            </div>
+            
+            <div class="compliance-grid">
+                <div class="compliance-item"><i class="fas fa-shopping-cart"></i><h4>FMCG & Consumer Goods</h4></div>
+                <div class="compliance-item"><i class="fas fa-pills"></i><h4>Pharma Distribution</h4></div>
+                <div class="compliance-item"><i class="fas fa-snowflake"></i><h4>Cold Chain Support</h4></div>
+                <div class="compliance-item"><i class="fas fa-boxes"></i><h4>E-Commerce Fulfilment</h4></div>
+                <div class="compliance-item"><i class="fas fa-industry"></i><h4>Industrial Materials</h4></div>
+                <div class="compliance-item"><i class="fas fa-seedling"></i><h4>Agri & Food Grains</h4></div>
+                <div class="compliance-item"><i class="fas fa-cogs"></i><h4>Automobile Parts</h4></div>
+                <div class="compliance-item"><i class="fas fa-truck-moving"></i><h4>3PL Services</h4></div>
             </div>
         </div>
     </section>
 
     <section id="location">
         <div class="container">
-            <div class="section-title"><h2>Location</h2></div>
+            <div class="section-title">
+                <h2>Location Advantages</h2>
+                <p>Strategically located in Kalaburagi's key industrial belt with excellent connectivity</p>
+            </div>
+            
             <div class="location-container">
                 <div class="location-info">
-                    <h3>Address</h3>
-                    <p>Near IOCL, Nandur Kesaratagi Industrial Area, Kalaburagi, Karnataka</p>
+                    <h3>Prime Industrial Location</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Road No. 6, Near IOCL, Nandur Kesaratagi Industrial Area</li>
+                        <li><i class="fas fa-road"></i> Shahabad Road, Kalaburagi - 585105, Karnataka</li>
+                        <li><i class="fas fa-map-pin"></i> Coordinates: 17°16'21.1"N 76°52'10.0"E</li>
+                        <li><i class="fas fa-gas-pump"></i> Nearby fuel station (IOCL) for transport efficiency</li>
+                        <li><i class="fas fa-truck"></i> Direct access to Shahabad Road & nearby highways</li>
+                        <li><i class="fas fa-parking"></i> Smooth truck movement and ample parking space</li>
+                    </ul>
+                    
+                    <h3>Why Choose Bhoodevi Warehouse</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Clean, dry and secure space</li>
+                        <li><i class="fas fa-check-circle"></i> Strong infrastructure, zero leakage roofing</li>
+                        <li><i class="fas fa-check-circle"></i> Efficient loading operations with 7 shutters</li>
+                        <li><i class="fas fa-check-circle"></i> Water and power sorted from Day 1</li>
+                        <li><i class="fas fa-check-circle"></i> Transparent handling and professional maintenance</li>
+                    </ul>
                 </div>
+                
                 <div class="map-placeholder">
-                    <img src="imagesimg5.jpg.jpg" alt="Map Location" class="map-image" style="width:100%; border-radius:8px;">
+                    <img src="imagesimg5.jpg.jpg" alt="Satellite view of the warehouse location" class="map-image">
                 </div>
             </div>
         </div>
@@ -301,12 +438,45 @@
 
     <section id="contact">
         <div class="container">
-            <div class="section-title"><h2>Contact Us</h2></div>
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for more information or to schedule a site visit</p>
+            </div>
+            
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Sanjay Kumar</h3>
-                    <p>Proprietor</p>
-                    <p><i class="fas fa-phone"></i> +91 63625 19546</p>
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <h4>Sanjay Kumar</h4>
+                                <p>proprietor</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p>+91 63625 19546</p>
+                                <p>+91 98808 88056</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Road No. 6, Near IOCL</p>
+                                <p>Nandur Kesaratagi Industrial Area</p>
+                                <p>Shahabad Road, Kalaburagi - 585105</p>
+                                <p>Karnataka, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                    <p>Sunday: Closed</p>
                     
                     <div style="margin-top: 30px; text-align: center;">
                         <img src="contactimage.jpg.jpg" alt="Sanjay Kumar" style="width: 150px; border-radius: 10px; border: 3px solid rgba(255,255,255,0.3); box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
@@ -314,10 +484,46 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xanrjezn" method="POST">
-                        <div class="form-group"><label>Name</label><input type="text" name="name" required></div>
-                        <div class="form-group"><label>Phone</label><input type="tel" name="phone" required></div>
-                        <div class="form-group"><label>Message</label><textarea name="message"></textarea></div>
+                    <h3>Send Us a Message</h3>
+                    <form id="inquiryForm" action="https://formspree.io/f/xanrjezn" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="business">Business Type</label>
+                            <select id="business" name="business">
+                                <option value="">Select your business type</option>
+                                <option value="fmcg">FMCG &amp; Consumer Goods</option>
+                                <option value="pharma">Pharma Distribution</option>
+                                <option value="ecommerce">E-Commerce Fulfilment</option>
+                                <option value="industrial">Industrial Materials</option>
+                                <option value="agri">Agri &amp; Food Grains</option>
+                                <option value="automobile">Automobile Parts</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="3pl">3PL Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your storage requirements..."></textarea>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="New Bhoodevi Warehouse Inquiry">
+
                         <button type="submit" class="cta-button">Send Message</button>
                     </form>
                 </div>
@@ -326,10 +532,53 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Bhoodevi Warehouse. All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Bhoodevi Warehouse</h3>
+                    <p>Industrial Grade Storage Facility providing secure, efficient, and compliant warehousing solutions in Kalaburagi's key industrial belt.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Property Details</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#features">Infrastructure</a></li>
+                        <li><a href="#compliance">Compliance</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Kalaburagi, Karnataka</li>
+                        <li><i class="fas fa-phone"></i> +91 63625 19546</li>
+                        <li><i class="fas fa-phone"></i> +91 98808 88056</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Bhoodevi Warehouse. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <a href="https://wa.me/916362519546?text=Hi" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/916362519546?text=Hi,%20I%20am%20interested%20in%20Bhoodevi%20Warehouse%20details." 
+       target="_blank" 
+       class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -339,32 +588,34 @@
 
     <div id="chatbot-box">
         <div id="chatbot-header">
-            <span>Assistant</span>
+            <span>Bhoodevi Assistant</span>
             <button id="close-chat" onclick="toggleChat()">✖</button>
         </div>
         <div id="chatbot-messages">
             <div class="bot-msg">Hello! Ask me about rent, area, or location.</div>
         </div>
         <div id="chatbot-input">
-            <input type="text" id="userInput" placeholder="Type here..." onkeypress="if(event.key==='Enter') sendMessage()">
+            <input type="text" id="userInput" placeholder="Ask here..." onkeypress="if(event.key==='Enter') sendMessage()">
             <button onclick="sendMessage()">Send</button>
         </div>
     </div>
 
     <script>
+        // Chatbot Toggle Logic
         function toggleChat() {
             var box = document.getElementById('chatbot-box');
             var btn = document.getElementById('chatbot-button');
             
             if (box.style.display === 'none' || box.style.display === '') {
                 box.style.display = 'flex';
-                btn.style.display = 'none'; // Hide button when open
+                btn.style.display = 'none'; // Hide button when chat is open
             } else {
                 box.style.display = 'none';
-                btn.style.display = 'flex'; // Show button when closed
+                btn.style.display = 'flex'; // Show button when chat is closed
             }
         }
 
+        // Send Message Logic
         async function sendMessage() {
             var input = document.getElementById("userInput");
             var message = input.value.trim();
