@@ -12,12 +12,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse for Rent in Gulbarga | Bhoodevi Warehouse</title>
-    <meta name="description" content="21,000 sq ft industrial warehouse for rent in Gulbarga. Contact +91 63625 19546.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- CORE STYLES --- */
         :root {
             --primary: #1a5276;
             --secondary: #e67e22;
@@ -30,30 +28,27 @@
         body { line-height: 1.6; color: var(--dark); background-color: #f5f5f5; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         
-        /* --- HEADER --- */
-        header { background-color: var(--primary); color: white; padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        /* HEADER */
+        header { background-color: var(--primary); color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         
         .logo { display: flex; align-items: center; gap: 10px; }
         .logo-img { 
             height: 60px; 
             width: auto; 
-            background: white; /* White box so logo shows on blue header */
+            background: white; 
             padding: 2px;
             border-radius: 4px;
         }
         .logo h1 { font-size: 22px; font-weight: 600; }
-        .logo span { color: var(--secondary); }
         
         nav ul { display: flex; list-style: none; gap: 20px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav ul li a:hover { color: var(--secondary); }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; }
         .mobile-menu { display: none; font-size: 24px; cursor: pointer; }
 
-        /* --- HERO SECTION --- */
+        /* HERO SECTION - Using .jpg.jpg */
         .hero {
-            /* FIXED: Matches your file "hero.jpg" exactly */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('hero.jpg');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('hero.jpg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -63,84 +58,44 @@
         }
         
         .hero h2 { font-size: 42px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
-        .cta-button { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
-        .cta-button:hover { background-color: #d35400; }
+        .cta-button { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; }
         
-        /* --- GENERAL SECTIONS --- */
+        /* SECTIONS */
         section { padding: 80px 0; }
         section:nth-child(even) { background-color: white; }
         .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 32px; color: var(--primary); margin-bottom: 10px; position: relative; display: inline-block; }
-        .section-title h2:after { content: ''; position: absolute; width: 70px; height: 3px; background-color: var(--secondary); bottom: -10px; left: 50%; transform: translateX(-50%); }
+        .section-title h2 { font-size: 32px; color: var(--primary); margin-bottom: 10px; }
         
-        /* --- GRIDS --- */
         .property-details, .image-gallery, .feature-list, .compliance-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 30px; 
         }
         
-        /* --- CARDS --- */
-        .detail-card, .compliance-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
-        .detail-card:hover, .compliance-item:hover { transform: translateY(-5px); }
-        .card-header h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .card-body ul { list-style: none; }
-        .card-body ul li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .detail-card, .compliance-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
         
-        /* --- GALLERY --- */
-        .gallery-item { position: relative; overflow: hidden; border-radius: 8px; }
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; transition: transform 0.3s; }
-        .gallery-item:hover img { transform: scale(1.05); }
-        .gallery-caption { position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.7); color: white; padding: 10px; text-align: center; }
-        
-        /* --- COMPLIANCE ICONS --- */
-        .compliance-item { text-align: center; }
-        .compliance-item i { font-size: 36px; color: var(--primary); margin-bottom: 15px; }
-        
-        /* --- LOCATION & MAP --- */
-        .location-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .map-image { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; }
-        .location-info ul { list-style: none; }
-        .location-info li { padding: 10px 0; border-bottom: 1px solid #eee; }
-        .location-info i { color: var(--primary); margin-right: 10px; }
-
-        /* --- CONTACT --- */
+        /* CONTACT */
         .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .contact-info { background: var(--primary); color: white; padding: 40px; border-radius: 8px; }
-        .contact-info h3 { margin-bottom: 20px; font-size: 24px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }
-        .contact-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start; }
-        .contact-item i { font-size: 20px; color: var(--secondary); margin-top: 5px; }
-        
         .contact-form { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
         
-        /* --- FOOTER --- */
-        footer { background: var(--dark); color: white; padding: 50px 0; }
-        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
-        .footer-col h3 { color: var(--secondary); margin-bottom: 20px; }
-        .footer-col ul { list-style: none; }
-        .footer-col a { color: #ddd; text-decoration: none; }
-        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; color: #aaa; }
+        footer { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
         
-        /* --- RESPONSIVE --- */
-        @media (max-width: 900px) {
-            .location-container, .contact-container { grid-template-columns: 1fr; }
-        }
         @media (max-width: 768px) {
-            nav ul { display: none; } 
+            .contact-container { grid-template-columns: 1fr; }
+            nav ul { display: none; }
             .mobile-menu { display: block; }
-            .hero { padding: 100px 0; }
-            .hero h2 { font-size: 32px; }
         }
 
-        /* --- CHATBOT & WHATSAPP STYLES --- */
+        /* --- CHATBOT & WHATSAPP --- */
         
         /* WhatsApp: GREEN, Above Chatbot */
         .whatsapp-float {
             position: fixed;
-            bottom: 90px;
+            bottom: 100px;
             right: 20px;
             background-color: #25d366;
             color: white;
@@ -153,9 +108,7 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
             z-index: 10001;
             text-decoration: none;
-            transition: transform 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
 
         /* Chatbot Button: BLUE, Bottom Right */
         #chatbot-button {
@@ -175,9 +128,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s;
         }
-        #chatbot-button:hover { transform: scale(1.1); }
 
         /* Chatbox Window */
         #chatbot-box {
@@ -189,83 +140,19 @@
             background: #fff;
             border: 1px solid #ccc;
             border-radius: 10px;
-            display: none; /* Hidden by default */
+            display: none;
             flex-direction: column;
-            z-index: 10002; /* Sits on top of everything */
+            z-index: 10002;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
 
-        #chatbot-header {
-            background: #2b6cb0;
-            color: white;
-            padding: 15px;
-            border-radius: 10px 10px 0 0;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        #close-btn {
-            cursor: pointer;
-            font-size: 18px;
-            background: none;
-            border: none;
-            color: white;
-        }
-
-        #chatbot-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: #f9f9f9;
-            font-size: 14px;
-        }
-
-        .bot-msg {
-            background: #e1effe;
-            color: #1e3a8a;
-            padding: 8px 12px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            display: inline-block;
-            max-width: 80%;
-        }
-
-        .user-msg {
-            background: #2b6cb0;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            text-align: right;
-            display: block;
-            margin-left: auto;
-            max-width: 80%;
-        }
-
-        #chatbot-input {
-            display: flex;
-            border-top: 1px solid #eee;
-            padding: 5px;
-        }
-
-        #chatbot-input input {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            outline: none;
-        }
-
-        #chatbot-input button {
-            padding: 10px 20px;
-            background: #2b6cb0;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 4px;
-        }
+        #chatbot-header { background: #2b6cb0; color: white; padding: 10px; border-radius: 10px 10px 0 0; font-weight: bold; display: flex; justify-content: space-between; }
+        #chatbot-messages { flex: 1; padding: 10px; overflow-y: auto; background: #f9f9f9; }
+        .bot-msg { background: #e1effe; padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; display: inline-block; }
+        .user-msg { background: #d1fae5; padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; text-align: right; display: block; margin-left: auto; }
+        #chatbot-input { display: flex; border-top: 1px solid #eee; }
+        #chatbot-input input { flex: 1; padding: 10px; border: none; outline: none; }
+        #chatbot-input button { padding: 10px 20px; background: #2b6cb0; color: white; border: none; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -273,72 +160,43 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="logo.jpg" alt="Bhoodevi Warehouse Logo" class="logo-img">
-                <h1>Bhoodevi <span>Warehouse</span></h1>
+                <img src="logo.jpg.jpg" alt="Logo" class="logo-img">
+                <h1>Bhoodevi Warehouse</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
     <section class="hero" id="home">
         <div class="container">
             <h2>Industrial Grade Storage Facility</h2>
-            <p>Ready-to-move Grade-B industrial storage with excellent road connectivity in Kalaburagi's key industrial belt</p>
+            <p>Ready-to-move Grade-B industrial storage with excellent road connectivity.</p>
             <a href="#contact" class="cta-button">Contact Us Today</a>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>Property Details</h2>
-                <p>Discover our state-of-the-art warehouse facility</p>
-            </div>
-            
+            <div class="section-title"><h2>Property Details</h2></div>
             <div class="property-details">
                 <div class="detail-card">
-                    <div class="card-header"><h3><i class="fas fa-ruler-combined"></i> Specs</h3></div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span>Total Area</span> <span>44,000 sq ft</span></li>
-                            <li><span>Built-Up</span> <span>21,000 sq ft</span></li>
-                            <li><span>Flooring</span> <span>Heavy-duty RCC</span></li>
-                        </ul>
-                    </div>
+                    <h3>Specs</h3>
+                    <p>44,000 sq ft Plot | 21,000 sq ft Built-Up</p>
                 </div>
-                
                 <div class="detail-card">
-                    <div class="card-header"><h3><i class="fas fa-truck-loading"></i> Logistics</h3></div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span>Shutters</span> <span>7 (10x11 ft)</span></li>
-                            <li><span>Access</span> <span>Container Friendly</span></li>
-                            <li><span>Docking</span> <span>Plinth Level</span></li>
-                        </ul>
-                    </div>
+                    <h3>Logistics</h3>
+                    <p>7 Shutters | Container Friendly</p>
                 </div>
-                
                 <div class="detail-card">
-                    <div class="card-header"><h3><i class="fas fa-bolt"></i> Utilities</h3></div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span>Power</span> <span>10 HP (3-Phase)</span></li>
-                            <li><span>Water</span> <span>Dedicated Borewell</span></li>
-                            <li><span>Safety</span> <span>Fire Hydrant System</span></li>
-                        </ul>
-                    </div>
+                    <h3>Utilities</h3>
+                    <p>10 HP Power | Borewell Water | Fire NOC</p>
                 </div>
             </div>
         </div>
@@ -346,74 +204,37 @@
 
     <section id="gallery">
         <div class="container">
-            <div class="section-title"><h2>Facility Gallery</h2></div>
+            <div class="section-title"><h2>Gallery</h2></div>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="imagesimg1.jpg" alt="Warehouse Exterior">
-                    <div class="gallery-caption">Exterior View</div>
+                    <img src="imagesimg1.jpg.jpg" alt="Exterior">
+                    <div style="text-align:center;">Exterior</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="imagesimg2.jpg" alt="Interior">
-                    <div class="gallery-caption">Column Free Interior</div>
+                    <img src="imagesimg2.jpg.jpg" alt="Interior">
+                    <div style="text-align:center;">Interior</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="imagesimg3.jpg" alt="Gate">
-                    <div class="gallery-caption">Main Gate</div>
+                    <img src="imagesimg3.jpg.jpg" alt="Gate">
+                    <div style="text-align:center;">Main Gate</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="imagesimg4.jpg" alt="Loading">
-                    <div class="gallery-caption">Loading Area</div>
+                    <img src="imagesimg4.jpg.jpg" alt="Loading">
+                    <div style="text-align:center;">Loading Area</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <div class="section-title"><h2>Infrastructure</h2></div>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="feature-content"><h4>Security</h4><p>Gated with Guard Room</p></div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-restroom"></i></div>
-                    <div class="feature-content"><h4>Facilities</h4><p>Washrooms & Sanitation</p></div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-tint"></i></div>
-                    <div class="feature-content"><h4>Water</h4><p>24x7 Supply</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="compliance">
-        <div class="container">
-            <div class="section-title"><h2>Suitable For</h2></div>
-            <div class="compliance-grid">
-                <div class="compliance-item"><i class="fas fa-boxes"></i><h4>FMCG</h4></div>
-                <div class="compliance-item"><i class="fas fa-pills"></i><h4>Pharma</h4></div>
-                <div class="compliance-item"><i class="fas fa-industry"></i><h4>Industrial</h4></div>
-                <div class="compliance-item"><i class="fas fa-seedling"></i><h4>Agri</h4></div>
             </div>
         </div>
     </section>
 
     <section id="location">
         <div class="container">
-            <div class="section-title"><h2>Location</h2></div>
+            <div class="section-title"><h2>Location Map</h2></div>
             <div class="location-container">
                 <div class="location-info">
-                    <h3>Address</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Road No. 6, Near IOCL</li>
-                        <li><i class="fas fa-road"></i> Nandur Kesaratagi Industrial Area</li>
-                        <li><i class="fas fa-city"></i> Kalaburagi, Karnataka</li>
-                    </ul>
+                    <p>Near IOCL, Nandur Kesaratagi Industrial Area, Kalaburagi</p>
                 </div>
                 <div class="map-placeholder">
-                    <img src="imagesimg5.jpg" alt="Map Location" class="map-image">
+                    <img src="imagesimg5.jpg.jpg" alt="Map Location" class="map-image">
                 </div>
             </div>
         </div>
@@ -426,21 +247,19 @@
                 <div class="contact-info">
                     <h3>Sanjay Kumar</h3>
                     <p>Proprietor</p>
-                    <br>
-                    <div class="contact-item"><i class="fas fa-phone"></i> <div>+91 63625 19546<br>+91 98808 88056</div></div>
+                    <p>+91 63625 19546</p>
                     
-                    <div style="margin-top: 30px; text-align: center;">
-                        <img src="contactimage.jpg" alt="Sanjay Kumar" style="max-width: 200px; border-radius: 8px; border: 3px solid rgba(255,255,255,0.3);">
+                    <div style="margin-top: 20px; text-align: center;">
+                        <img src="contactimage.jpg.jpg" alt="Proprietor" style="width: 150px; border-radius: 8px;">
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Send Message</h3>
                     <form action="https://formspree.io/f/xanrjezn" method="POST">
                         <div class="form-group"><label>Name</label><input type="text" name="name" required></div>
                         <div class="form-group"><label>Phone</label><input type="tel" name="phone" required></div>
                         <div class="form-group"><label>Message</label><textarea name="message"></textarea></div>
-                        <button type="submit" class="cta-button">Send</button>
+                        <button type="submit" class="cta-button">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -448,26 +267,10 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>Bhoodevi Warehouse</h3>
-                    <p>Industrial Grade Storage Facility.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li>Kalaburagi, Karnataka</li>
-                        <li>+91 63625 19546</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">&copy; 2025 Bhoodevi Warehouse.</div>
-        </div>
+        <p>&copy; 2025 Bhoodevi Warehouse. All Rights Reserved.</p>
     </footer>
 
-    <a href="https://wa.me/916362519546?text=Hi,%20I%20am%20interested%20in%20Bhoodevi%20Warehouse." 
-       class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/916362519546?text=Hi" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -478,10 +281,10 @@
     <div id="chatbot-box">
         <div id="chatbot-header">
             <span>Assistant</span>
-            <button id="close-btn" onclick="toggleChat()">✖</button>
+            <span style="cursor:pointer" onclick="toggleChat()">✖</span>
         </div>
         <div id="chatbot-messages">
-            <div class="bot-msg">Hello! Ask me about rent, size, or location.</div>
+            <div class="bot-msg">Hello! Ask me about rent or area.</div>
         </div>
         <div id="chatbot-input">
             <input type="text" id="userInput" placeholder="Type here..." onkeypress="if(event.key==='Enter') sendMessage()">
@@ -490,66 +293,38 @@
     </div>
 
     <script>
-        // Toggle Chat Window
         function toggleChat() {
             var box = document.getElementById('chatbot-box');
-            var btn = document.getElementById('chatbot-button');
-            
-            if (box.style.display === 'none' || box.style.display === '') {
+            if (box.style.display === 'none') {
                 box.style.display = 'flex';
-                btn.style.display = 'none'; // Optional: hide button when chat is open
             } else {
                 box.style.display = 'none';
-                btn.style.display = 'flex'; // Show button when chat is closed
             }
         }
 
-        // Send Message Logic
         async function sendMessage() {
             var input = document.getElementById("userInput");
             var message = input.value.trim();
             if (!message) return;
 
             var messages = document.getElementById("chatbot-messages");
-            
-            // Show user message
             messages.innerHTML += '<div class="user-msg">' + message + '</div>';
             input.value = "";
             messages.scrollTop = messages.scrollHeight;
 
             try {
-                // Connect to backend
                 var response = await fetch("https://bhoodevi-chatbot.onrender.com/chat", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ message: message })
                 });
-
                 var data = await response.json();
                 messages.innerHTML += '<div class="bot-msg">' + data.reply + '</div>';
             } catch (error) {
-                messages.innerHTML += '<div class="bot-msg" style="color:red">Error connecting. Call +91 63625 19546</div>';
+                messages.innerHTML += '<div class="bot-msg">System offline. Call +91 63625 19546</div>';
             }
             messages.scrollTop = messages.scrollHeight;
         }
-
-        // Mobile Menu
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            var nav = document.querySelector('nav ul');
-            if (nav.style.display === 'flex') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'flex';
-                nav.style.flexDirection = 'column';
-                nav.style.position = 'absolute';
-                nav.style.top = '70px';
-                nav.style.left = '0';
-                nav.style.width = '100%';
-                nav.style.background = '#1a5276';
-                nav.style.padding = '20px';
-                nav.style.textAlign = 'center';
-            }
-        });
     </script>
 
 </body>
