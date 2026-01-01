@@ -12,10 +12,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse for Rent in Gulbarga | Bhoodevi Warehouse</title>
+    <meta name="description" content="21,000 sq ft industrial warehouse for rent in Nandur Kesaratagi, Gulbarga. Contact +91 63625 19546.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* --- CORE VARIABLES --- */
         :root {
             --primary: #1a5276;
             --secondary: #e67e22;
@@ -28,7 +30,7 @@
         body { line-height: 1.6; color: var(--dark); background-color: #f5f5f5; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         
-        /* HEADER */
+        /* --- HEADER --- */
         header { background-color: var(--primary); color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         
@@ -43,11 +45,13 @@
         .logo h1 { font-size: 22px; font-weight: 600; }
         
         nav ul { display: flex; list-style: none; gap: 20px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: var(--secondary); }
         .mobile-menu { display: none; font-size: 24px; cursor: pointer; }
 
-        /* HERO SECTION - Using .jpg.jpg */
+        /* --- HERO SECTION (Using .jpg.jpg) --- */
         .hero {
+            /* Double extension used here as requested */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('hero.jpg.jpg');
             background-size: cover;
             background-position: center;
@@ -58,14 +62,15 @@
         }
         
         .hero h2 { font-size: 42px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
-        .cta-button { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; }
+        .cta-button { display: inline-block; background-color: var(--secondary); color: white; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
         
-        /* SECTIONS */
+        /* --- SECTIONS --- */
         section { padding: 80px 0; }
         section:nth-child(even) { background-color: white; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { font-size: 32px; color: var(--primary); margin-bottom: 10px; }
         
+        /* --- GRIDS & CARDS --- */
         .property-details, .image-gallery, .feature-list, .compliance-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -73,26 +78,35 @@
         }
         
         .detail-card, .compliance-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+        .card-header h3 { color: var(--primary); margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card-body ul { list-style: none; }
+        .card-body li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
         
-        /* CONTACT */
+        /* --- GALLERY IMAGES (Using .jpg.jpg) --- */
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.03); }
+        .gallery-caption { text-align: center; margin-top: 5px; font-weight: 500; color: var(--gray); }
+        
+        /* --- CONTACT --- */
         .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .contact-info { background: var(--primary); color: white; padding: 40px; border-radius: 8px; }
         .contact-form { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 15px; }
         .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
         
+        /* --- FOOTER --- */
         footer { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
         
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .contact-container { grid-template-columns: 1fr; }
             nav ul { display: none; }
             .mobile-menu { display: block; }
         }
 
-        /* --- CHATBOT & WHATSAPP --- */
+        /* ================= BUTTON STYLES ================= */
         
-        /* WhatsApp: GREEN, Above Chatbot */
+        /* 1. WhatsApp Button: GREEN, Positioned HIGHER (Bottom 100px) */
         .whatsapp-float {
             position: fixed;
             bottom: 100px;
@@ -108,9 +122,11 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
             z-index: 10001;
             text-decoration: none;
+            transition: transform 0.3s;
         }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Chatbot Button: BLUE, Bottom Right */
+        /* 2. Chatbot Button: BLUE, Positioned LOWER (Bottom 20px) */
         #chatbot-button {
             position: fixed;
             bottom: 20px;
@@ -128,31 +144,53 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform 0.3s;
         }
+        #chatbot-button:hover { transform: scale(1.1); }
 
-        /* Chatbox Window */
+        /* 3. Chatbox Window */
         #chatbot-box {
             position: fixed;
-            bottom: 90px;
+            bottom: 90px; /* Above the chatbot button */
             right: 20px;
             width: 320px;
             height: 400px;
             background: #fff;
             border: 1px solid #ccc;
             border-radius: 10px;
-            display: none;
+            display: none; /* Hidden by default */
             flex-direction: column;
             z-index: 10002;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
 
-        #chatbot-header { background: #2b6cb0; color: white; padding: 10px; border-radius: 10px 10px 0 0; font-weight: bold; display: flex; justify-content: space-between; }
-        #chatbot-messages { flex: 1; padding: 10px; overflow-y: auto; background: #f9f9f9; }
-        .bot-msg { background: #e1effe; padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; display: inline-block; }
-        .user-msg { background: #d1fae5; padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; text-align: right; display: block; margin-left: auto; }
-        #chatbot-input { display: flex; border-top: 1px solid #eee; }
+        #chatbot-header {
+            background: #2b6cb0;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #chatbot-messages { flex: 1; padding: 15px; overflow-y: auto; background: #f9f9f9; font-size: 14px; }
+        .bot-msg { background: #e1effe; padding: 8px 12px; border-radius: 10px; margin-bottom: 8px; display: inline-block; color: #000; }
+        .user-msg { background: #2b6cb0; color: white; padding: 8px 12px; border-radius: 10px; margin-bottom: 8px; text-align: right; display: block; margin-left: auto; width: fit-content; }
+        
+        #chatbot-input { display: flex; border-top: 1px solid #eee; padding: 5px; }
         #chatbot-input input { flex: 1; padding: 10px; border: none; outline: none; }
-        #chatbot-input button { padding: 10px 20px; background: #2b6cb0; color: white; border: none; cursor: pointer; }
+        #chatbot-input button { padding: 0 20px; background: #2b6cb0; color: white; border: none; cursor: pointer; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -168,9 +206,11 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu" onclick="document.querySelector('nav ul').style.display = document.querySelector('nav ul').style.display === 'flex' ? 'none' : 'flex'"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
@@ -187,16 +227,34 @@
             <div class="section-title"><h2>Property Details</h2></div>
             <div class="property-details">
                 <div class="detail-card">
-                    <h3>Specs</h3>
-                    <p>44,000 sq ft Plot | 21,000 sq ft Built-Up</p>
+                    <div class="card-header"><h3>Specs</h3></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span>Plot Area</span> <span>44,000 sq ft</span></li>
+                            <li><span>Built-Up</span> <span>21,000 sq ft</span></li>
+                            <li><span>Floor</span> <span>Heavy-duty RCC</span></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="detail-card">
-                    <h3>Logistics</h3>
-                    <p>7 Shutters | Container Friendly</p>
+                    <div class="card-header"><h3>Logistics</h3></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span>Shutters</span> <span>7 (10x11 ft)</span></li>
+                            <li><span>Access</span> <span>Container Friendly</span></li>
+                            <li><span>Docking</span> <span>Plinth Level</span></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="detail-card">
-                    <h3>Utilities</h3>
-                    <p>10 HP Power | Borewell Water | Fire NOC</p>
+                    <div class="card-header"><h3>Utilities</h3></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span>Power</span> <span>10 HP (3-Phase)</span></li>
+                            <li><span>Water</span> <span>Borewell</span></li>
+                            <li><span>Safety</span> <span>Fire NOC</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,19 +266,19 @@
             <div class="image-gallery">
                 <div class="gallery-item">
                     <img src="imagesimg1.jpg.jpg" alt="Exterior">
-                    <div style="text-align:center;">Exterior</div>
+                    <div class="gallery-caption">Exterior View</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagesimg2.jpg.jpg" alt="Interior">
-                    <div style="text-align:center;">Interior</div>
+                    <div class="gallery-caption">Column Free Interior</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagesimg3.jpg.jpg" alt="Gate">
-                    <div style="text-align:center;">Main Gate</div>
+                    <div class="gallery-caption">Main Gate</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagesimg4.jpg.jpg" alt="Loading">
-                    <div style="text-align:center;">Loading Area</div>
+                    <div class="gallery-caption">Loading Area</div>
                 </div>
             </div>
         </div>
@@ -228,13 +286,14 @@
 
     <section id="location">
         <div class="container">
-            <div class="section-title"><h2>Location Map</h2></div>
+            <div class="section-title"><h2>Location</h2></div>
             <div class="location-container">
                 <div class="location-info">
-                    <p>Near IOCL, Nandur Kesaratagi Industrial Area, Kalaburagi</p>
+                    <h3>Address</h3>
+                    <p>Near IOCL, Nandur Kesaratagi Industrial Area, Kalaburagi, Karnataka</p>
                 </div>
                 <div class="map-placeholder">
-                    <img src="imagesimg5.jpg.jpg" alt="Map Location" class="map-image">
+                    <img src="imagesimg5.jpg.jpg" alt="Map Location" class="map-image" style="width:100%; border-radius:8px;">
                 </div>
             </div>
         </div>
@@ -247,10 +306,10 @@
                 <div class="contact-info">
                     <h3>Sanjay Kumar</h3>
                     <p>Proprietor</p>
-                    <p>+91 63625 19546</p>
+                    <p><i class="fas fa-phone"></i> +91 63625 19546</p>
                     
-                    <div style="margin-top: 20px; text-align: center;">
-                        <img src="contactimage.jpg.jpg" alt="Proprietor" style="width: 150px; border-radius: 8px;">
+                    <div style="margin-top: 30px; text-align: center;">
+                        <img src="contactimage.jpg.jpg" alt="Sanjay Kumar" style="width: 150px; border-radius: 10px; border: 3px solid rgba(255,255,255,0.3); box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                     </div>
                 </div>
                 
@@ -281,10 +340,10 @@
     <div id="chatbot-box">
         <div id="chatbot-header">
             <span>Assistant</span>
-            <span style="cursor:pointer" onclick="toggleChat()">✖</span>
+            <button id="close-chat" onclick="toggleChat()">✖</button>
         </div>
         <div id="chatbot-messages">
-            <div class="bot-msg">Hello! Ask me about rent or area.</div>
+            <div class="bot-msg">Hello! Ask me about rent, area, or location.</div>
         </div>
         <div id="chatbot-input">
             <input type="text" id="userInput" placeholder="Type here..." onkeypress="if(event.key==='Enter') sendMessage()">
@@ -295,10 +354,14 @@
     <script>
         function toggleChat() {
             var box = document.getElementById('chatbot-box');
-            if (box.style.display === 'none') {
+            var btn = document.getElementById('chatbot-button');
+            
+            if (box.style.display === 'none' || box.style.display === '') {
                 box.style.display = 'flex';
+                btn.style.display = 'none'; // Hide button when open
             } else {
                 box.style.display = 'none';
+                btn.style.display = 'flex'; // Show button when closed
             }
         }
 
@@ -308,20 +371,24 @@
             if (!message) return;
 
             var messages = document.getElementById("chatbot-messages");
+            
+            // Add User Message
             messages.innerHTML += '<div class="user-msg">' + message + '</div>';
             input.value = "";
             messages.scrollTop = messages.scrollHeight;
 
             try {
+                // Fetch response
                 var response = await fetch("https://bhoodevi-chatbot.onrender.com/chat", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ message: message })
                 });
+
                 var data = await response.json();
                 messages.innerHTML += '<div class="bot-msg">' + data.reply + '</div>';
             } catch (error) {
-                messages.innerHTML += '<div class="bot-msg">System offline. Call +91 63625 19546</div>';
+                messages.innerHTML += '<div class="bot-msg" style="color:red">System offline. Call +91 63625 19546</div>';
             }
             messages.scrollTop = messages.scrollHeight;
         }
