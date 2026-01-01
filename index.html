@@ -1176,5 +1176,21 @@
     }
   }
 </script>
+       <script>
+  const chatbotButton = document.getElementById("chatbot-button");
+  const chatbotBox = document.getElementById("chatbot-box");
+
+  let isChatOpen = false;
+
+  chatbotButton.addEventListener("click", () => {
+    if (isChatOpen) {
+      chatbotBox.style.display = "none";
+      isChatOpen = false;
+    } else {
+      chatbotBox.style.display = "flex";
+      isChatOpen = true;
+    }
+  });
+</script>
 </body>
 </html>
