@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhoodevi Warehouse – Official Facility Brochure & Technical Specs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy2: #132040;
+  --gold: #c9973a;
+  --gold2: #e8b44a;
+  --steel: #2d4a6e;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --white: #ffffff;
+  --light: #f5f2ec;
+  --green: #4ade80;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  background: #f0f2f5;
+  color: var(--navy);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Screen Action Bar */
+.action-bar {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.action-brand {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.action-brand span {
+  color: var(--gold);
+}
+.action-btn {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+.action-btn:hover {
+  background: var(--gold2);
+}
+
+/* Brochure Layout */
+.brochure-container {
+  max-width: 210mm;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  background: var(--white);
+  padding: 20mm 15mm;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 2px dashed #ddd; /* Visual indicator on screen only */
+}
+.page:last-child {
+  border-bottom: none;
+}
+
+/* Header & Footer Branding */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-logo img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+.header-logo h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+.header-logo h2 span {
+  color: var(--gold);
+}
+.header-meta {
+  text-align: right;
+}
+.header-meta .tag {
+  background: rgba(201, 151, 58, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(201, 151, 58, 0.3);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.footer-row {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+.footer-row span strong {
+  color: var(--navy);
+}
+
+/* Hero Section inside Brochure */
+.hero-block {
+  background: var(--navy);
+  color: var(--white);
+  padding: 24px;
+  position: relative;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--gold);
+}
+.hero-block h1 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.hero-block h1 span {
+  color: var(--gold);
+}
+.hero-block p {
+  font-size: 13.5px;
+  color: var(--mid);
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+/* Photo Gallery Block */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.photo-main {
+  position: relative;
+  height: 220px;
+  border: 1px solid #ddd;
+}
+.photo-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 22, 40, 0.85);
+  color: var(--white);
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.photo-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.photo-side {
+  position: relative;
+  height: 104px;
+  border: 1px solid #ddd;
+}
+.photo-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stats Row */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(201, 151, 58, 0.3);
+  border: 1px solid rgba(201, 151, 58, 0.3);
+  margin-bottom: 20px;
+}
+.stat-item {
+  background: var(--light);
+  padding: 12px 10px;
+  text-align: center;
+}
+.stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+.stat-val span {
+  color: var(--gold);
+  font-size: 16px;
+}
+.stat-desc {
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Features Block */
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.feature-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  border-bottom: 1px solid rgba(201, 151, 58, 0.3);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.feature-list {
+  list-style: none;
+}
+.feature-list li {
+  font-size: 12.5px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+.feature-list li::before {
+  content: "✓";
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* Page 2 Details */
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 4px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.spec-table tr {
+  border-bottom: 1px solid #eee;
+}
+.spec-table td {
+  padding: 7px 0;
+  font-size: 12px;
+}
+.spec-table td.lbl {
+  color: var(--muted);
+  font-weight: 500;
+  width: 45%;
+}
+.spec-table td.val {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.proximity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.proximity-table th {
+  background: var(--navy);
+  color: var(--white);
+  text-align: left;
+  padding: 6px 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.proximity-table td {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+.proximity-table tr:nth-child(even) {
+  background: #fdfcfa;
+}
+
+.compliance-strip {
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  padding: 14px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.comp-item {
+  font-size: 12px;
+}
+.comp-lbl {
+  font-size: 9px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.comp-val {
+  font-weight: 700;
+  color: #15803d;
+  margin-top: 2px;
+}
+
+/* Contact & Action Section with QR Codes */
+.action-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  background: var(--light);
+  border: 1px solid rgba(201, 151, 58, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+}
+.contact-card-brochure h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.contact-card-brochure .prop-title {
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.contact-card-brochure p {
+  font-size: 12px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.contact-card-brochure p strong {
+  color: var(--navy);
+}
+
+.qr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.qr-box {
+  background: var(--white);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.qr-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 6px;
+}
+.qr-label {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+/* Print Overrides */
+@media print {
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .brochure-container {
+    margin: 0;
+    box-shadow: none;
+  }
+  .page {
+    border-bottom: none;
+    margin: 0;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Floating Screen Action Bar (No Print) -->
+<div class="action-bar no-print">
+  <div class="action-brand">BHOODEVI <span>WAREHOUSE</span> – Brochure Portal</div>
+  <div>
+    <button class="action-btn" onclick="window.print()">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:4px;">
+        <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+</div>
+
+<div class="brochure-container">
+
+  <!-- PAGE 1: COVER & OVERVIEW -->
+  <div class="page">
+    <div>
+      <!-- Header Branding -->
+      <div class="header-row">
+        <div class="header-logo">
+          <img src="Bhoodevi_logo.png" alt="Bhoodevi Warehouse Logo">
+          <h2>BHOODEVI <span>WAREHOUSE</span></h2>
+        </div>
+        <div class="header-meta">
+          <span class="tag">Anchor Tenant Brochure</span>
+        </div>
+      </div>
+
+      <!-- Hero Block -->
+      <div class="hero-block">
+        <h1>Industrial Storage &amp;<br><span>Logistics Infrastructure</span></h1>
+        <p>A premier 21,000 sq. ft. Grade-B industrial facility purpose-built for anchor distributors, FMCG chains, pharma depots, and 3PL logistics on the Hyderabad–Bengaluru corridor.</p>
+      </div>
+
+      <!-- Statistics strip -->
+      <div class="stats-strip">
+        <div class="stat-item">
+          <div class="stat-val">21<span>K</span></div>
+          <div class="stat-desc">Sq. Ft. Built-up</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">44<span>K</span></div>
+          <div class="stat-desc">Sq. Ft. Total Plot</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">7</div>
+          <div class="stat-desc">Loading Shutters</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">5<span>ft</span></div>
+          <div class="stat-desc">Plinth Height</div>
+        </div>
+      </div>
+
+      <!-- Facility Photos -->
+      <div class="photo-gallery">
+        <div class="photo-main">
+          <img src="secure_perimeter.jpg" alt="Bhoodevi Warehouse Front View">
+          <div class="photo-label">Premium Facility Front &amp; High Boundary Walls</div>
+        </div>
+        <div class="photo-side-col">
+          <div class="photo-side">
+            <img src="image (13).jpg" alt="Bhoodevi Warehouse Interior">
+            <div class="photo-label" style="font-size: 8px; padding: 4px 8px;">Arched Roof Column-Free Interior</div>
+          </div>
+          <div class="photo-side">
+            <img src="satellite_layout.jpg" alt="Bhoodevi Warehouse Satellite View">
+            <div class="photo-label" style="font-size: 8px; padding: 4px 8px;">Proximity &amp; Site Layout</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Block -->
+      <div class="features-container">
+        <div class="feature-box">
+          <h3>Structural Advantages</h3>
+          <ul class="feature-list">
+            <li><strong>Column-Free Interior:</strong> Completely open span design for maximum shelving layout options.</li>
+            <li><strong>Heavy-Duty RCC Floor:</strong> Solid reinforced concrete floors built to handle high rack loads.</li>
+            <li><strong>Stress-Free Arched Roof:</strong> Zero-leak curved metal sheet structure.</li>
+          </ul>
+        </div>
+        <div class="feature-box">
+          <h3>Security &amp; Utilities</h3>
+          <ul class="feature-list">
+            <li><strong>Multi-Layer Security:</strong> 24/7 CCTV surveillance, boundary walls, and dedicated security room at the gate.</li>
+            <li><strong>Utilities &amp; Hygiene:</strong> 10 HP 3-phase industrial power, 24/7 water supply, 3 separate fresh-up rooms (ladies, staff, laborers), and separate hand wash station for laborers.</li>
+            <li><strong>Driveway:</strong> Deep container and 40-ft multi-axle truck compatible driveway.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-row">
+      <span>Proprietor: <strong>Sanjay Kumar H.</strong></span>
+      <span>bhoodeviwarehouse.com</span>
+      <span>Page 1 of 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: SPECS, LOCATIONS & CONTACTS -->
+  <div class="page">
+    <div>
+      <!-- Header Branding -->
+      <div class="header-row">
+        <div class="header-logo">
+          <img src="Bhoodevi_logo.png" alt="Bhoodevi Warehouse Logo">
+          <h2>BHOODEVI <span>WAREHOUSE</span></h2>
+        </div>
+        <div class="header-meta">
+          <span class="tag">Technical specifications</span>
+        </div>
+      </div>
+
+      <!-- Specifications & Distances Grid -->
+      <div class="details-grid">
+        <div>
+          <h2 class="section-title">Facility Details</h2>
+          <table class="spec-table">
+            <tr>
+              <td class="lbl">Total Plot Area</td>
+              <td class="val">44,000 sq. ft.</td>
+            </tr>
+            <tr>
+              <td class="lbl">Built-Up Area</td>
+              <td class="val">21,000 sq. ft.</td>
+            </tr>
+            <tr>
+              <td class="lbl">Plinth Height</td>
+              <td class="val">5 ft (plinth docking)</td>
+            </tr>
+            <tr>
+              <td class="lbl">Loading Shutters</td>
+              <td class="val">7 units (10×11 ft each)</td>
+            </tr>
+            <tr>
+              <td class="lbl">Power Utility</td>
+              <td class="val">10 HP | 3-Phase Industrial</td>
+            </tr>
+            <tr>
+              <td class="lbl">Water Source</td>
+              <td class="val">Private Borewell (24×7)</td>
+            </tr>
+            <tr>
+              <td class="lbl">Sanitary Facilities</td>
+              <td class="val">3 washrooms (Ladies, Staff, Laborer)</td>
+            </tr>
+            <tr>
+              <td class="lbl">Hand Wash Station</td>
+              <td class="val">Separate station for laborers after work</td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <h2 class="section-title">Transit Distances</h2>
+          <p style="font-size: 11px; color: var(--muted); margin-bottom: 8px;">Situated on Shahabad Road, Nandur Kesaratagi Industrial Area. Heavy-vehicle weigh bridge and IOCL station are within 1 km.</p>
+          <table class="proximity-table">
+            <thead>
+              <tr>
+                <th>Destination Market</th>
+                <th>Transit Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hyderabad (Telangana)</td>
+                <td>~4.0 Hours</td>
+              </tr>
+              <tr>
+                <td>Solapur (Maharashtra)</td>
+                <td>~3.0 Hours</td>
+              </tr>
+              <tr>
+                <td>Bengaluru (Karnataka)</td>
+                <td>~6.0 Hours</td>
+              </tr>
+              <tr>
+                <td>Raichur (Central Karnataka)</td>
+                <td>~1.0 Hour</td>
+              </tr>
+              <tr>
+                <td>Gulbarga Railway Station</td>
+                <td>~8.0 Kilometers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Compliance Strip -->
+      <h2 class="section-title">Documentation &amp; Compliance</h2>
+      <div class="compliance-strip">
+        <div class="compliance-grid">
+          <div class="comp-item">
+            <div class="comp-lbl">GSTIN (Proprietorship)</div>
+            <div class="comp-val">29AMDPG8465A1Z4</div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-lbl">Fire Safety Status</div>
+            <div class="comp-val">✓ Fire Dept. NOC Certified</div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-lbl">Institutional Storage</div>
+            <div class="comp-val">✓ CWC Empanelled</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact & Action Box with QR Codes -->
+      <h2 class="section-title">Submit Lease Requirements</h2>
+      <div class="action-section">
+        <div class="contact-card-brochure">
+          <h3>Sanjay Kumar H.</h3>
+          <div class="prop-title">Proprietor, Bhoodevi Warehouse</div>
+          <p><strong>Primary Mobile:</strong> +91 63625 19546</p>
+          <p><strong>WhatsApp Inquiries:</strong> +91 98808 88056</p>
+          <p><strong>Location:</strong> Road No. 6, Near IOCL, Nandur Kesaratagi Industrial Area, Shahabad Road, Kalaburagi – 585105, Karnataka</p>
+          <p style="margin-top: 10px; font-size: 11px; color: var(--muted); font-style: italic;">* Please contact us directly for customized lease agreements, layouts, or to book a physical walkthrough.</p>
+        </div>
+        <div class="qr-grid">
+          <div class="qr-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https%3A%2F%2Fmaps.google.com%2F%3Fq%3D17.2725%2C76.8694" alt="Google Maps QR Code">
+            <div class="qr-label">Scan for Location</div>
+          </div>
+          <div class="qr-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https%3A%2F%2Fwa.me%2F919880888056%3Ftext%3DHi%2520Sanjay%252C%2520I%2520am%2520interested%2520in%2520Bhoodevi%2520Warehouse." alt="WhatsApp QR Code">
+            <div class="qr-label">Scan to Chat</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-row">
+      <span>Proprietor: <strong>Sanjay Kumar H.</strong></span>
+      <span>bhoodeviwarehouse.com</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
